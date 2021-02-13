@@ -60,21 +60,24 @@ class ProductItem extends HTMLElement {
         numItemsInCart2.innerHTML = parseInt(numItemsInCart2.innerHTML) - 1;
         cartContent.push(cartContent.indexOf(id), 1);
       }
-      //add to local storage as
+      //add to local storage as string data
       local.setItem('cartContent', JSON.stringify(cartContent));
     });
     
+    //add all elemente to list
     listElem.appendChild(imgElem);
     listElem.appendChild(titleElem);
     listElem.appendChild(priceElem);
     listElem.appendChild(buttonElem);
     
+    //copy style from css file
     let styleLink = document.createElement('link');
     styleLink.rel = 'stylesheet';
     styleLink.type = 'text/css';
     styleLink.href = './styles/styles.css';
     document.querySelector('head').appendChild(styleLink);
     
+    //add to shadowDOM
     shadow.appendChild(styleLink);
     shadow.appendChild(listElem);
   } 
