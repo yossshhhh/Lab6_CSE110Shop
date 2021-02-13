@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   // TODO
   
-  let local = window.localStorage;
+  var local = window.localStorage;
   let productList = document.getElementById('product-list');
   let numItemsInCart = document.getElementById('cart-count');
   
