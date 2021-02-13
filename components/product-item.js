@@ -58,7 +58,7 @@ class ProductItem extends HTMLElement {
         buttonElem.innerHTML = 'Add to Cart';
         //num from string
         numItemsInCart2.innerHTML = parseInt(numItemsInCart2.innerHTML) - 1;
-        cartContent.push(cartContent.indexOf(id), 1);
+        cartContent.splice(cartContent.indexOf(id), 1);
       }
       //add to local storage as string data
       local.setItem('cartContent', JSON.stringify(cartContent));
