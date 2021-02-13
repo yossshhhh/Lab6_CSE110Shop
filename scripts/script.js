@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   else {
     fetch('https://fakestoreapi.com/products')
-      .then(response => response.json());
+      .then(response => response.json())
       .then(data => {
         local.setItem('products'), JSON.stringify(data))
         var product = JSON.parse(local.getItem('products'));
