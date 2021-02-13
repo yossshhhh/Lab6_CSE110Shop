@@ -51,7 +51,7 @@ class ProductItem extends HTMLElement {
         numItemsInCart2.innerHTML = parseInt(numItemsInCart2.innerHTML) - 1;
         cartContent.push(cartContent.indexOf(id), 1);
       }
-      local.setItem('cartContent', JSON.stringif(cartContent));
+      local.setItem('cartContent', JSON.stringify(cartContent));
     });
     
     listElem.appendChild(imgElem);
