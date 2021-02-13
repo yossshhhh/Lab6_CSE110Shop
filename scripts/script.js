@@ -40,6 +40,6 @@ window.addEventListener('DOMContentLoaded', () => {
   
   //update counter
   var cartContent = JSON.parse(local.getItem('cartContent'));
-  numItemsInCart.textContent - cartContent.length;
+  numItemsInCart.textContent = cartContent.length;
 });
   
