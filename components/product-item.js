@@ -6,8 +6,10 @@ class ProductItem extends HTMLElement {
   constructor(id, image, description, title, price) {
     super(); //always call super() first
     
+    //shadowDom
     let shadow = this.attachShadow({mode: 'open' });
     var local = window.localStorage;
+    
     
     let listElem = document.createElement('list');
     listElem.setAttribute('class', 'product');
