@@ -42,4 +42,4 @@ window.addEventListener('DOMContentLoaded', () => {
   var cartContent = JSON.parse(local.getItem('cartContent'));
   numItemsInCart.textContent = cartContent.length;
 });
-  
+   
