@@ -25,7 +25,7 @@ class ProductItem extends HTMLElement {
     p2Elem.setAttribute('class', 'price');
     
     let buttonElem = document.createElement('button');
-    buttonElem.setAttribute('onclick', "alert('Added to Cart')";       
+    buttonElem.setAttribute('onclick', "alert('Added to Cart')");       
     let cartContent = JSON.parse(local.getItem('cartContent'));
     
     if(cartContent.includes(id)) {
