@@ -18,9 +18,7 @@ class ProductItem extends HTMLElement {
     let imgElem = document.createElement('img');
     imgElem.setAttribute('alt', description); //
     imgElem.setAttribute('src', image); //
-    if(imgElem.height > 300) {
-      imgElem.height = '300';
-    }
+    imgElem.setAttribute('max-height', '300');
     
     //product title
     let titleElem = document.createElement('t');
