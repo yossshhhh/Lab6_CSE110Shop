@@ -80,7 +80,7 @@ class ProductItem extends HTMLElement {
     //add to shadowDOM
     shadow.appendChild(styleLink);
     shadow.appendChild(listElem);
-  } 
+  }  
 }
 
 customElements.define('product-item', ProductItem);
