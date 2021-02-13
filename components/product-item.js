@@ -25,18 +25,20 @@ class ProductItem extends HTMLElement {
     p2Elem.setAttribute('class', 'price');
     
     let buttonElem = document.createElement('button');
-    //
+    buttonElem.setAttribute('onclick', "alert('Added to Cart')";       
     let cartContent = JSON.parse(local.getItem('cartContent'));
+    
     if(cartContent.includes(id)) {
       buttonElem.innerHTML = 'Remove from Cart';
-      buttonElem.setAttribute('onclick', "alert('Aded tp Cart')");
     }
-    else
+    else {
       buttonElem.innerHTML = 'Add to Cart';
+      buttonElem.setAttribute('onclick', "alert('Aded to Cart')");
+    }
     
     let numItemsInCart2 = document.getElementById('cart-count');
     buttonElem.addEventListener('click', function() {
-      cartContent = JSON.prase(local.getItem('cartContent'));
+      cartContent = JSON.parse(local.getItem('cartContent'));
       if(buttonElem.innerHTML == 'Add to Cart') {
         buttonElem.innerHTML = 'Remove from Cart';
         numItemsInCart2.innerHTML = parseInt(numItemsInCart2.innerHTML) + 1;
