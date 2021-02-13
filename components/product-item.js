@@ -65,8 +65,8 @@ class ProductItem extends HTMLElement {
     });
     
     listElem.appendChild(imgElem);
-    listElem.appendChild(pElem);
-    listElem.appendChild(p2Elem);
+    listElem.appendChild(titleElem);
+    listElem.appendChild(priceElem);
     listElem.appendChild(buttonElem);
     
     let styleLink = document.createElement('link');
