@@ -27,8 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
       })
   }
   
-  if(!myStorage.getItem('cartContent'))
-    myStorage.setItem('cartContent', JSOJN.stringify([]));
+  if(!local.getItem('cartContent'))
+    local.setItem('cartContent', JSON.stringify([]));
   
   let cartContent = JSON.parse(local.getItem('cartContent'));
   numItemsInCart.textContent - cartContent.length;
