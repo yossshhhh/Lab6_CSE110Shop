@@ -25,7 +25,7 @@ class ProductItem extends HTMLElement {
     
     let buttonElem = document.createElement('button');
     //
-    let cartContent = JSON.parse(local.getItem('cartContent'));
+    let cartContent = JSON.parse(local.getItem('in_cart'));
     if(cartContent.includes(id))
       buttonElem.innerHTML = 'Remove from Cart';
     else
