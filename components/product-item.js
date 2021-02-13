@@ -31,9 +31,9 @@ class ProductItem extends HTMLElement {
     priceElem.innerHTML = '$' + price;
     priceElem.setAttribute('class', 'price');
     
-    //add to cart
-    let buttonElem = document.createElement('button');
-    buttonElem.setAttribute('onclick', "alert('Added to Cart')");       
+    //add to cart button
+    let buttonElem = document.createElement('button'); 
+    //in cart
     let cartContent = JSON.parse(local.getItem('cartContent'));
     
     //adjust text based on if in cart
@@ -52,6 +52,7 @@ class ProductItem extends HTMLElement {
       cartContent = JSON.parse(local.getItem('cartContent'));
       if(buttonElem.innerHTML == 'Add to Cart') {
         buttonElem.innerHTML = 'Remove from Cart';
+        alert('Added to Cart');    
         //get num from string
         numItemsInCart2.innerHTML = parseInt(numItemsInCart2.innerHTML) + 1;
         cartContent.push(id);
