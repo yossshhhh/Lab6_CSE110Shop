@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if(!local.getItem('cartContent'))
     local.setItem('cartContent', JSON.stringify([]));
   
-  let cartContent = JSON.parse(local.getItem('cartContent'));
+  var cartContent = JSON.parse(local.getItem('cartContent'));
   numItemsInCart.textContent - cartContent.length;
 });
   
