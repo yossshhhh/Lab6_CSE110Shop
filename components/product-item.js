@@ -16,9 +16,10 @@ class ProductItem extends HTMLElement {
     
     //set image restrictions
     let imgElem = document.createElement('img');
-    imgElem.setAttribute('alt', description); //
-    imgElem.setAttribute('src', image); //
-    imgElem.setAttribute('max-height', '300');
+    imgElem.setAttribute('alt', description); 
+    imgElem.setAttribute('src', image);
+    //not max height, but keeps images within boxes
+    imgElem.height = '300';
     
     //product title
     let titleElem = document.createElement('t');
