@@ -42,7 +42,7 @@ class ProductItem extends HTMLElement {
     }
     else {
       buttonElem.innerHTML = 'Add to Cart';
-      buttonElem.setAttribute('onclick', "alert('Aded to Cart')");
+      //buttonElem.setAttribute('onclick', "alert('Added to Cart')");
     }
     
     //on click send an alert notifying added to cart
