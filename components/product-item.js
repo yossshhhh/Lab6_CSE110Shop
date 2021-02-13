@@ -30,7 +30,7 @@ class ProductItem extends HTMLElement {
     else
       buttonElem.innerHTML = 'Add to Cart';
     
-    var numItemsInCart2 = document.getElementById('numItemsInCart');
+    let numItemsInCart2 = document.getElementById('cart-count');
     buttonElem.addEventListener('click', function() {
       cartContent = JSON.prase(local.getItem('cartContent'));
       if(buttonElem.innerHTML == 'Add to Cart') {
