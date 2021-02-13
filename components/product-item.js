@@ -10,26 +10,31 @@ class ProductItem extends HTMLElement {
     let shadow = this.attachShadow({mode: 'open' });
     var local = window.localStorage;
     
-    
+    //set class to product in list
     let listElem = document.createElement('list');
     listElem.setAttribute('class', 'product');
     
+    //set image restrictions
     let imgElem = document.createElement('img');
     imgElem.setAttribute('alt', description); //
     imgElem.setAttribute('src', image); //
     
-    let pElem = document.createElement('p');
-    pElem.innerHTML = title;
-    pElem.setAttribute('class', 'title');
+    //product title
+    let titleElem = document.createElement('t');
+    titleElem.innerHTML = title;
+    titleElem.setAttribute('class', 'title');
     
-    let p2Elem = document.createElement('p');
-    p2Elem.innerHTML = '$' + price;
-    p2Elem.setAttribute('class', 'price');
+    //product price
+    let priceElem = document.createElement('p');
+    priceElem.innerHTML = '$' + price;
+    priceElem.setAttribute('class', 'price');
     
+    //add to cart
     let buttonElem = document.createElement('button');
     buttonElem.setAttribute('onclick', "alert('Added to Cart')");       
     let cartContent = JSON.parse(local.getItem('cartContent'));
     
+    //adjust text based on if in cart
     if(cartContent.includes(id)) {
       buttonElem.innerHTML = 'Remove from Cart';
     }
@@ -38,19 +43,24 @@ class ProductItem extends HTMLElement {
       buttonElem.setAttribute('onclick', "alert('Aded to Cart')");
     }
     
+    //on click send an alert notifying added to cart
     let numItemsInCart2 = document.getElementById('cart-count');
     buttonElem.addEventListener('click', function() {
+      //get data as string from raw text
       cartContent = JSON.parse(local.getItem('cartContent'));
       if(buttonElem.innerHTML == 'Add to Cart') {
         buttonElem.innerHTML = 'Remove from Cart';
+        //get num from string
         numItemsInCart2.innerHTML = parseInt(numItemsInCart2.innerHTML) + 1;
         cartContent.push(id);
       }
       else {
         buttonElem.innerHTML = 'Add to Cart';
+        //num from string
         numItemsInCart2.innerHTML = parseInt(numItemsInCart2.innerHTML) - 1;
         cartContent.push(cartContent.indexOf(id), 1);
       }
+      //add to local storage as
       local.setItem('cartContent', JSON.stringify(cartContent));
     });
     
