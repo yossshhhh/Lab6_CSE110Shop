@@ -1,5 +1,6 @@
 // product-item.js
 
+
 class ProductItem extends HTMLElement {
   // TODO
   constructor(id, image, description, title, price) {
